@@ -19,23 +19,23 @@ namespace team
             Random rand = new Random();
 
             List<string> nameList = new List<string>();
-            List<string> team1List = new List<string>();
-            List<string> team2List = new List<string>();
-            List<string> team3List = new List<string>();
-            List<string> team4List = new List<string>();
-            List<string> team5List = new List<string>();
-            List<string> team6List = new List<string>();
-            List<string> team7List = new List<string>();
-            List<string> team8List = new List<string>();
-            List<string> team9List = new List<string>();
-            List<string> team10List = new List<string>();
-            List<string> team11List = new List<string>();
+
+            int genderboy = 0;
+            int gendergirl = 0;
+
+            for (int i = 0; i < gender.Length; i++)
+            {
+                if (gender[i] == "男")
+                    genderboy++;
+                else
+                    gendergirl++;
+            }
 
             for (int i = 0; i < name.Length; i++)
             {
                 nameList.Add(name[i]);
             }
-            while (n < 13)
+            while (n < 12)
             {
                 Console.Write("第" + n + "組的人有:  ");
                 for (int i = 0; i < 6; i++)
