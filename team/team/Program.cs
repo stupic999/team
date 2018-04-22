@@ -40,32 +40,32 @@ namespace team
                 }
 
                 // 宣告組別的數量
-                int teamcount = nameList.Count / teampp;
+                int TeamCount = nameList.Count / teampp;
 
                 // 宣告多餘的人數
-                int sidepoeple = nameList.Count % teampp;
+                int SidePeople = nameList.Count % teampp;
 
                 // 宣告多餘的人數2，以免把多餘的人數都加在第一組
-                int sidepeople2 = sidepoeple;
+                int SidePeople2 = SidePeople;
 
-                while (n <= teamcount)
+                while (n <= TeamCount)
                 {
                     Console.Write("第" + n + "組的人有:  ");
 
                     for (int i = 0; i < teampp; i++)
                     {
-                        if (sidepoeple > 0 && sidepeople2 == sidepoeple)
+                        if (SidePeople > 0 && SidePeople2 == SidePeople)
                         {
                             int l = rand.Next(0, nameList.Count);
                             Console.Write(nameList[l] + " ");
                             nameList.RemoveAt(l);
-                            sidepoeple--;
+                            SidePeople--;
                         }
                         int j = rand.Next(0, nameList.Count);
                         Console.Write(nameList[j] + " ");
                         nameList.RemoveAt(j);
                     }
-                    sidepeople2--;
+                    SidePeople2--;
                     Console.WriteLine("");
                     n++;
                 }
